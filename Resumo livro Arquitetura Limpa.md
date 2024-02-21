@@ -1,11 +1,12 @@
 ## Introdução
   No ínicio do capítulo, o autor nos faz refletir sobre fazer algo funcionar uma vez não é tão difícil e que fazer da maneira correta (com eficiência e eficácia) é difícil. Pela expêriência do autor, ele sugere que adquirir _conhecimentos_ e _habilidades_, desenvolver _raciocínio lógico_, _insighists_, _dedicação_ e _disciplina_ faz parte de ser um bom profissional. Um bom software para ser criado e mantido, só exige uma fração dos recursos humanos (ou pelo menos deveria), pois mudanças são simples e rápidas, o esforço é reduzido em proporção que a funcionalidade e flexibilidade são maximizadas. Ainda que isso soe um pouco fantasioso para quem já vive no mercado, a experiência do autor reforça que esse nível de organização é possível. No fim do texto, o autor indaga sobre a experiência do leitor:
-    a) Você já trabalhou em sistemas tão interconectados e intrincadamente acoplados que qualquer mudança?
-    b) Já trabalhou em sistemas passando por mudanças triviais por semanas e envolvendo grandes riscos?
-    c) Já experimentou impedância de um código ruim e um péssimo design?
-    d) O design de algum dos sistemas em que você trabalhoi já provocou um efeito negativo sobre a moral da equipe, a confiança dos clientes e a paciência dos gerentes?
-    e) Você já viu equipes, departamentos e até empresas serem prejudicadas pela péssima estrutura de um software?
-    f) Já esteve no INFERNO DA PROGRAMAÇÃO?
+  
+  a) Você já trabalhou em sistemas tão interconectados e intrincadamente acoplados que qualquer mudança?
+  b) Já trabalhou em sistemas passando por mudanças triviais por semanas e envolvendo grandes riscos?
+  c) Já experimentou impedância de um código ruim e um péssimo design?
+  d) O design de algum dos sistemas em que você trabalhoi já provocou um efeito negativo sobre a moral da equipe, a confiança dos clientes e a paciência dos gerentes?
+  e) Você já viu equipes, departamentos e até empresas serem prejudicadas pela péssima estrutura de um software?
+  f) Já esteve no INFERNO DA PROGRAMAÇÃO?
   
 ## Cap.1 – O que são Design e Arquitetura?
   1.1 Objetivo
