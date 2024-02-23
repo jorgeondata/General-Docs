@@ -84,9 +84,14 @@
 
 
 ## Cap.7 - SRP: O princípio da Responsabiildade Única
+> *Os princípios SOLID nos dizem como organizar as funções e estruturas de dados em classes e como essas classes devem ser interconectadas: Uma classe é apenas um agrupamento acoplado de funções e dados, cada sistema de software tem agrupamentos como esses, chamados ou não de classes.*]
 
-- SRP
-- OCP
-- LSP
-- ISP
-- DIP
+### SRP (Single Responsability Principle)
+
+### OCP (Open-Closed Principle)
+
+### LSP (Liskov Substitution Principle)
+
+### ISP (Interface Segregation Principle)
+
+### DIP (Dependency Inversion Principle)
