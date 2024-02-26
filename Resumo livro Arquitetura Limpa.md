@@ -1,4 +1,4 @@
-# Texto original: 12,714 palavras / Texto editado: 2,412+ palavras
+# Texto original: 12,714 palavras / Texto editado: 3,075 palavras
 
 ## ParteI - Introdução
   No ínicio do capítulo, o autor nos faz refletir sobre fazer algo funcionar uma vez não é tão difícil e que fazer da maneira correta (com eficiência e eficácia) é difícil. Pela expêriência do autor, ele sugere que adquirir _conhecimentos_ e _habilidades_, desenvolver _raciocínio lógico_, _insighists_, _dedicação_ e _disciplina_ faz parte de ser um bom profissional. Um bom software para ser criado e mantido, só exige uma fração dos recursos humanos (ou pelo menos deveria), pois mudanças são simples e rápidas, o esforço é reduzido em proporção que a funcionalidade e flexibilidade são maximizadas. Ainda que isso soe um pouco fantasioso para quem já vive no mercado, a experiência do autor reforça que esse nível de organização é possível. No fim do texto, o autor indaga sobre a experiência do leitor:
@@ -85,17 +85,31 @@
 > *Os princípios SOLID nos dizem como organizar as funções e estruturas de dados em classes e como essas classes devem ser interconectadas: Uma classe é apenas um agrupamento acoplado de funções e dados, cada sistema de software tem agrupamentos como esses, chamados ou não de classes.*
 
 O objetivo principal dos princípios SOLID é _a criação de estruturas de software de nível médio_ que:
-[] Tolerem mudanças
-[] Sejam fáceis de entender
-[] Sejam a base de componentes que possam ser usados em muitos sistemas de software
+- [ ] Tolerem mudanças
+- [ ] Sejam fáceis de entender
+- [ ] Sejam a base de componentes que possam ser usados em muitos sistemas de software
 
+- Normalmente os princípios estão associados com OOP, mas são recomendadas serem usadas por questões de boas práticas.
 - "Nível médio" se refere a aplicabilidade dos princípios por programadores que trabalham no nível do módulo, ou seja, ocorre logo acime do nível do código e visa definir os tipos de estruturas de software usadas dentro de módulos e componentes.
 - Cada um dos princípios abaixo foram descritos de forma a entender as implicações arquiteturais de forma a entender as razões para alterar códigos, facilidade de mudança e substituição, critérios de dependência e detalhes políticos de nível superior a inferior.
 
 ### SRP (Single Responsability Principle)
-- O Princípio da Responsabilidade Única (SRP)
+- "Uma função deve fazer uma, e apenas uma, coisa." Esse princípio é usado quando funções grandes são _refatoradas_ em funções menores. O Princípio da Responsabilidade Única é derivado da citação acima: ***Um módulo deve ser responsável por um, e apenas um, ator***.
+- Um módulo é apenas um conjunto coeso de funções e estrutura de dados em algumas linguagens e ambientes de desenvolvimento, no entanto, uma definição mais simples para módulo poderia ser _arquivo-fonte_.
+- Sempre irão existir problemas que ocorrem por aproximar demais o código do qual diferentes atores dependem, por isso o SRP dis para _separar o código **do qual** diferentes atores dependam_.
+- Existe a possibilidade de várias pessoas mudarem o mesmo arquivo-fonte por diferentes razões, por isso é necessário _separar o código **que dá suporte** a atores diferentes_.
+- O SRP está relacionado com o Princípio do Fechamento Comum, no nível dos componentes e com o Eixo da Mudança, no nível arquitetural.
+- Entender significa reconhecer a definição do princípio e identificar sua aplicação teórica no desenvolvimento de software: separar as _funcionalidades_ em *unidades discretas de lógica* para que cada unidade tenha apenas uma razão para mudar. 
+- Compreender significa perceber as implicações do método (o Como) e a finalidade (o Por que) do princípio no ciclo de vida do Software, tendo consequências: de como ele afeta a manutenibilidade do código, facilidade de testes, a refatoração e a capacidade de adaptação a mudanças de requisitos, ou seja, uma percepção profunda do princípio a longo prazo.
+
 
 ### OCP (Open-Closed Principle)
+- "Um _artefato_ de software deve ser aberto para extensão, mas fechado para modificação", assim que o Princípio Aberto/Fechado foi cunhado: em outras palavras, o _comportamento_ de um artefato de software deve ser extensível sem que isso o modifique.
+- Normalmente esse princípio guia o design de classes e módulos, mas no nível arquitetural, 
+![Fluxograma de aplicação do OCP](<Particionando Processos e Separando Em Componentes.png>)
+- Neste exemplo, as classes marcadas com <I> são interfaces, as marcadas com <DS> são estruturas de dados. As flechas vazadas representam <relacionamentos de uso>, enquanto as flechas fechadas são <relacionamentos de implementação ou herança>. Cada linha duplas cruzada é apenas em uma direção, isso significa que todos os relacionamentos entre componentes são unidirecionais.
+- O Controlador deve ser protegido das mudanças feitas nos Apresentadores. Os Apresentadores devem ser protegidos das mudanças feitas nas Visualizações. A Interface deve ser protegida de todo o resto, pois ela se enquadra no Princípio Aberto/Fechado: A interface contém as regras de negócio e as políticas de nível mais alto da aplicação, está a cargo da questão central. Já os outros componentes estão lidando com questões periféricas.
+- Embora seja necessário proteger a Interface de mudanças no Controlador, também é necessário proteger o Controlador de mudanças na Interface ocultando os detalhes da Interface.
 
 ### LSP (Liskov Substitution Principle)
 
