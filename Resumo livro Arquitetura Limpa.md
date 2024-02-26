@@ -1,6 +1,6 @@
-# Texto original: 10,776 palavras / Texto editado: 2,412 palavras
+# Texto original: 12,714 palavras / Texto editado: 2,412+ palavras
 
-## Introdução
+## ParteI - Introdução
   No ínicio do capítulo, o autor nos faz refletir sobre fazer algo funcionar uma vez não é tão difícil e que fazer da maneira correta (com eficiência e eficácia) é difícil. Pela expêriência do autor, ele sugere que adquirir _conhecimentos_ e _habilidades_, desenvolver _raciocínio lógico_, _insighists_, _dedicação_ e _disciplina_ faz parte de ser um bom profissional. Um bom software para ser criado e mantido, só exige uma fração dos recursos humanos (ou pelo menos deveria), pois mudanças são simples e rápidas, o esforço é reduzido em proporção que a funcionalidade e flexibilidade são maximizadas. Ainda que isso soe um pouco fantasioso para quem já vive no mercado, a experiência do autor reforça que esse nível de organização é possível. No fim do texto, o autor indaga sobre a experiência do leitor:
   
 - Você já trabalhou em sistemas tão interconectados e intrincadamente acoplados que qualquer mudança?
@@ -10,13 +10,13 @@
 - Você já viu equipes, departamentos e até empresas serem prejudicadas pela péssima estrutura de um software?
 - Já esteve no INFERNO DA PROGRAMAÇÃO?
   
-## Cap.1 – O que são Design e Arquitetura?
-  ### 1.1 Objetivo
+### O que são Design e Arquitetura?
+  ### Objetivo
   - Um dos objetivos principais e introdutórios do livro é definir de uma vez por todas que não existe diferença entre _design_ e _arquitetura_. As pessoas normalmente tendem a usar a arquitetura no contexto de algo em um nível mais alto, independente dos detalhes dos níveis mais baixos, enquanto para design, parece sugerir as estruturas e decisões de nível mais baixo. Contudo, ao observar de uma maneira global, os detalhes de baixo nível e a estrutura de alto nível são partes do mesmo todo: juntos, formam um tecido que define e molda um sistema, há uma linha constante de decisões que se estende dos níveis mais altos para os mais baixos, como em um design de software. (Poético, não?).
   - Mas, qual é objetivo dessas decisões? Qual o objetivo do bom design de software? [O objetivo da arquitetura de software é minimizar os recursos humanos necessários para construir e manter um determinado sistema.] A medida da qualidade do design corresponde à medida do esforço necessário para satisfazer as demandas do cliente. 
   > Se o esforço for baixo ao longo da vida do sistema, o design é bom. Se o esforço aumenta a cada nova versão ou release, o design é ruim. Simples assim - Robert C. Martin
 
-  ### 1.2 Estudo de caso
+  ### Estudo de caso
   - O autor nos apresenta 4 gráficos representando o perído do ciclo de vida do produto de software de uma empresa anônima, mostrando crescimento da equipe de engenharia, produtividade no mesmo período, custo por linha de código em função do tempo, produtividade por release e no final, a folha de pagamento do desenvolvedor por release. Em cada caso gráfico são feitas intepretações:
   ### Gráfico 1
   > Nesse gráfico se mostra a necessidade contínua de mais engenheiros, por um lado isso pode se atribuir a complexidade do projeto ou dificuldade na manutenção.
@@ -29,18 +29,16 @@
   ### Gráfico 5 
   > Na visão estratégica, os custos deveriam se justificar pelo desenvolvimento eficiente, mas nesse gráfico, os custos crescentes associados ao desenvolvimento ineficiente e improdutivo estão exigindo que uma atitude drástica seja tomada, pois talvez não seja o caso, mas em algum ponto a receita vai ser ultrapassada pelos custos.
   
-  ### 1.3 Conclusão
+  ### Conclusão
   - A preocupação de lançar o produto  no mercado o quanto antes significa que você tem um horda de concorrentes e precisa ficar à frente deles, correndo o mais rápido que puder. Não dá para voltar e limpar tudo pois tem sempre um próximo recurso para terminar, ao ponto que a bagunça vai se acumulando e a produtividade continua a se aproximar assintoticamente do zero. Uma das mentiras que desenvolvedores acreditam é a noção de que escrever um código bagunçado permite fazer tudo mais rápido a curto prazo e só diminui o ritmo a longo prazo, e se esquecem que **fazer bagunça é sempre mais lento do que organizar e manter tudo limpo!** Para a organização de desenvolvimento, a melhor opção é **reconhecer e evitar seu próprio excesso de confiança** e **levar a sério a qualidade da arquitetura de software**. Construir um sistema com um design e arquitetura que minimizem o esforço e maximizem a produtividade, para isso, saber quais atributos da arquitetura do sistama podem concretizar esse objetivo.
 
-## Cap.2 – Um conto de Dois Valores
-
-  ### Comportamento x Arquitetura
+### Um conto de Dois Valores
   - Há um consenso de que todo sistema de software fornece dois valores para os stakeholders: comportamento e estrutura. Da mesma forma, há uma crença de que o trabalho de um programador é apenas fazer a máquina implementar os requisitos e corrigir qualquer bug, quando na verdade não é só isso. Já quanto a estrutura, e uma bem feita, cumpre o propósito de um software (produto[ware] suave[soft], que é ser fácil de mudar e a dificuldade em fazer essas mudanças deve ser proporcional apenas ao escopo da mudança e não à _forma_ da mudança. Mas qual desses fornece o maior valor? Considerando que existem sistemas praticamente impossíveis de mudar, pois o custo da mudança excede seu benefício?
   > Usando a matriz Einsenhower podemos responder essas perguntas da seguinte forma: o comportamente é urgente, mas nem sempre é particularmente importante, enquanto a arquitetura é importante, mas nunca é particularmente urgente. O erro que gerentes e desenvolvedores cometem com frequência é falhar em separar recursos que são urgentes, mas não importantes, daqueles que são realmente urgentes e importantes.
   - Infelizmente a maioria dos gerentes de negócios não estão equipados para avaliar a importância da arquitetura, para isso são _contratados os desenvolvedores de software_. Portanto, é responsabilidade do time de desenvolvimento (ou um squad) garantir que a importância da arquitetura sobre a urgência dos recursos.
   - Francamente, a equipe de desenvolvimento precisa lutar pelo que acredita ser melhor para a empresa, assim como fazem os outros setores. Lembre-se que se a arquitetura vier por último, então o sistema ficará cada vez mais caro para desenvolver, tornando qualquer mudança impossível para uma parte ou todo o sistema.
 
-## Cap.3 - Paradigmas da Programação
+## Parte II - Paradigmas da Programação
  A arquitetura de software começa com o código. Em 1938, Alan Turing estabeleceu as bases do que se tornaria programação de computadores. Em meados da década de 40, Turing já escrevia programas de computador (com laços, ramificações, atribuições, sub-rotinas e outras estruturas familiares) com a linguagem binária. Depois, em 1951, Grace Hopper cunhou o termo _compilador_ e inventou o primeiro compilador, o A0. Depois que o Fortran foi inventado em 1953, começaram a criação constante de linguagens de programação. Por consequência, A seguir explicam-se os paradigmas da programação:
  
  - [Programação Estruturada]: Surgiu como uma reação contra o estilo de programação baseado em _GO TO_, promovendo o uso de estruturas de controle sequênciais (_if_/_then_/_else_), de seleção e de repetição (_do_/_while_/_until_), facilitando a escrita de cógigo mais claro de entender e manter.
@@ -49,7 +47,7 @@
 
  > Deve-se manter um excelente alinhamento desses três paradigmas com as três grandes grandes preocupações da arquitetura: função, separação de componentes e gerenciamento de dados.
 
-## Cap.4 - Programação Estruturada
+### Programação Estruturada
   > *A programação estruturada impõe disciplina sobre a transferência direta do controle.*
   - A estrutura de controle quando combinadas em uma execução sequencial provavam que todos programas (pelo menos na época) poderiam ser construídos a partir de três estruturas: [sequência], [seleção] e [iteração]. Essas estruturas de controle correspondiam ao mesmo conjunto mínimo de estruturas de controle a partir das quais todos os programas podem ser construídos.
   - As declarações sequenciais podem ser comprovadas por meio de enumeração simples, traçando as entradas da sequência até as saídas da sequência.
@@ -61,7 +59,7 @@
   - A programação estruturada força os programadores a decompor um programa recursivamente em um conjunto de pequenas funções comprováveis. Dessa forma, podem ser realizados testes para provar que essas pequenas funções estão incorretas: se os testes falharem na comprovação da inexatidão, consideramos as funções como suficientemente corretas para nossos propósitos.
   - Um programa comprovável é um programa que apresenta algum resultado e os testes mostram a presença, não a ausência, de bugs. _Decomposição funcional_ é uma das melhores práticas de programação moderna.
 
-## Cap.5 - Programação Orientada a Objetos
+### Programação Orientada a Objetos
   > *A programação orientada a objetos impõe disciplina sobre a transferência indireta do controle.*
   - A POO dá suporte a três conceitos estabelecidos: [encapsulamento], [herança] e [polimorfismo].
   - *Encapsulamento* se refere a declarar estruturas de dados e funções em arquivos de cabeçalho, para em seguida, implementá-las em arquivos de implementação. Algumas palavras-chave envolvendo esse conceito incluem _public_,_private_ e _protected_, suportando a ideia de que os programadores não precisem contornar os dados encapsulados.
@@ -72,7 +70,7 @@
   - Linguagens orientadas a objetos oferencem um polimorfismo seguro e conveniente, significando que qualquer dependência de código fonte, não importando onde esteja, pode ser invertida. Por exemplo, você pode reorganizar as dependências do código fonte do seu sistema para que o [banco de dados] e [interface do usuário] dependam de regras de negócio em vez o contrário. Como consequência, as regras de negócio, UI e banco de dados podem ser compiladas em três componentes separados ou unidades implantáveis que tenham as mesmas dependências de código fonte.
   - Desenvolvimento independente significa implantar os módulos do seu sistema de forma independente, assim como desenvolvidos independentemente por equipes diferentes.
 
-## Cap.6 - Programação Funcional
+### Programação Funcional
   > *A programação funcional impõe diciplina sobre a atribuição.*
   - Primeiro o autor faz uma comparação sobre a diferenças de programas em Java e Clojure: o programa em Java usa uma variável mutável (que muda de estado durante a execução do programa), enquanto no programa em Clojure, as variváveis são inicializadas, mas nunca modificadas. Apesar do exemplo complexo, percebemos uma declaração óbvia: *variáveis em linguagens funcionais não variam*.
   - Todas as condições de corrida ('race conditions'), condições de impasse ('deadlock conditions') e problemas de atualizações simultâneos decorrem das variáveis mutáveis, ou seja, todos os problemas que exigem várias threads e múltiplos processadores não podem acontecer se não houver variáveis mutáveis. A imutabilidade é praticavem dentro de certas concessões.
@@ -83,10 +81,19 @@
   > *Se tivermos armazenamento e poder de processamento suficientes, podemos tornar nossas aplicações imutáveis e, portanto, inteiramente funcionais. O software é composto de sequência, seleção, iteração e indireção. Nada mais, nada menos.*
 
 
-## Cap.7 - SRP: O princípio da Responsabiildade Única
-> *Os princípios SOLID nos dizem como organizar as funções e estruturas de dados em classes e como essas classes devem ser interconectadas: Uma classe é apenas um agrupamento acoplado de funções e dados, cada sistema de software tem agrupamentos como esses, chamados ou não de classes.*]
+## Parte III - SRP: O princípio da Responsabiildade Única
+> *Os princípios SOLID nos dizem como organizar as funções e estruturas de dados em classes e como essas classes devem ser interconectadas: Uma classe é apenas um agrupamento acoplado de funções e dados, cada sistema de software tem agrupamentos como esses, chamados ou não de classes.*
+
+O objetivo principal dos princípios SOLID é _a criação de estruturas de software de nível médio_ que:
+[] Tolerem mudanças
+[] Sejam fáceis de entender
+[] Sejam a base de componentes que possam ser usados em muitos sistemas de software
+
+- "Nível médio" se refere a aplicabilidade dos princípios por programadores que trabalham no nível do módulo, ou seja, ocorre logo acime do nível do código e visa definir os tipos de estruturas de software usadas dentro de módulos e componentes.
+- Cada um dos princípios abaixo foram descritos de forma a entender as implicações arquiteturais de forma a entender as razões para alterar códigos, facilidade de mudança e substituição, critérios de dependência e detalhes políticos de nível superior a inferior.
 
 ### SRP (Single Responsability Principle)
+- O Princípio da Responsabilidade Única (SRP)
 
 ### OCP (Open-Closed Principle)
 
@@ -95,3 +102,55 @@
 ### ISP (Interface Segregation Principle)
 
 ### DIP (Dependency Inversion Principle)
+
+## Parte IV - Princípios dos Componentes
+
+### Componentes
+
+### Coesão de Componentes
+
+### Acoplamento de Componentes
+
+## Parte V - Arquitetura
+
+### O que é Arquitetura?
+
+### Independência
+
+### Estabelecendo Limites
+
+### Anatomia do Limite
+
+### Política e Nível
+
+### Regras de Negócio
+
+### Arquitetura Gritante
+
+### Arquitetura Limpa
+
+### Apresentadores e Objetos Humble
+
+### Limites Parciais
+
+### Camadas e Limites
+
+### O Componente Main
+
+### Serviços Grandes e Pequenos
+
+### O Limite Teste
+
+### Arquitetura Limpa Embarcada
+
+## Parte VI - Detalhes
+
+### A Base de Dados é um detalhe
+
+### A Web é um detalhe
+
+### Frameworks são detalhes
+
+### Estudo de Caso: Vendas de Vídeo
+
+### O Capítulo Perdido
