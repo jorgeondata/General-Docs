@@ -1,7 +1,7 @@
-# Texto original: 12,714 palavras / Texto editado: 3,075 palavras
+# Texto original: 14,255 palavras / Texto editado: 3,075 + 257 palavras
 
 ## Parte I - Introdução
-  No ínicio do capítulo, o autor nos faz refletir sobre fazer algo funcionar uma vez não é tão difícil e que fazer da maneira correta (com eficiência e eficácia) é difícil. Pela expêriência do autor, ele sugere que adquirir _conhecimentos_ e _habilidades_, desenvolver _raciocínio lógico_, _insighists_, _dedicação_ e _disciplina_ faz parte de ser um bom profissional. Um bom software para ser criado e mantido, só exige uma fração dos recursos humanos (ou pelo menos deveria), pois mudanças são simples e rápidas, o esforço é reduzido em proporção que a funcionalidade e flexibilidade são maximizadas. Ainda que isso soe um pouco fantasioso para quem já vive no mercado, a experiência do autor reforça que esse nível de organização é possível. No fim do texto, o autor indaga sobre a experiência do leitor:
+  No ínicio do capítulo, o autor nos faz refletir sobre fazer algo funcionar uma vez não é tão difícil e que fazer da maneira correta (com eficiência e eficácia) é difícil. Pela expêriência do autor, ele sugere que adquirir _conhecimentos_ e _habilidades_, desenvolver _raciocínio lógico_, _insights_, _dedicação_ e _disciplina_ faz parte de ser um bom profissional. Um bom software para ser criado e mantido, só exige uma fração dos recursos humanos (ou pelo menos deveria), pois mudanças são simples e rápidas, o esforço é reduzido em proporção que a funcionalidade e flexibilidade são maximizadas. Ainda que isso soe um pouco fantasioso para quem já vive no mercado, a experiência do autor reforça que esse nível de organização é possível. No fim do texto, o autor indaga sobre a experiência do leitor:
   
 - Você já trabalhou em sistemas tão interconectados e intrincadamente acoplados que qualquer mudança?
 - Já trabalhou em sistemas passando por mudanças triviais por semanas e envolvendo grandes riscos?
@@ -13,11 +13,11 @@
 ### O que são Design e Arquitetura?
   ### Objetivo
   - Um dos objetivos principais e introdutórios do livro é definir de uma vez por todas que não existe diferença entre _design_ e _arquitetura_. As pessoas normalmente tendem a usar a arquitetura no contexto de algo em um nível mais alto, independente dos detalhes dos níveis mais baixos, enquanto para design, parece sugerir as estruturas e decisões de nível mais baixo. Contudo, ao observar de uma maneira global, os detalhes de baixo nível e a estrutura de alto nível são partes do mesmo todo: juntos, formam um tecido que define e molda um sistema, há uma linha constante de decisões que se estende dos níveis mais altos para os mais baixos, como em um design de software. (Poético, não?).
-  - Mas, qual é objetivo dessas decisões? Qual o objetivo do bom design de software? [O objetivo da arquitetura de software é minimizar os recursos humanos necessários para construir e manter um determinado sistema.] A medida da qualidade do design corresponde à medida do esforço necessário para satisfazer as demandas do cliente. 
+  - Mas, qual é objetivo dessas decisões? Qual o objetivo do bom design de software? ***O objetivo da arquitetura de software é minimizar os recursos humanos necessários para construir e manter um determinado sistema***. A medida da qualidade do design corresponde à medida do esforço necessário para satisfazer as demandas do cliente. 
   > Se o esforço for baixo ao longo da vida do sistema, o design é bom. Se o esforço aumenta a cada nova versão ou release, o design é ruim. Simples assim - Robert C. Martin
 
   ### Estudo de caso
-  - O autor nos apresenta 4 gráficos representando o perído do ciclo de vida do produto de software de uma empresa anônima, mostrando crescimento da equipe de engenharia, produtividade no mesmo período, custo por linha de código em função do tempo, produtividade por release e no final, a folha de pagamento do desenvolvedor por release. Em cada caso gráfico são feitas intepretações:
+  - O autor nos apresenta 5 gráficos representando o perído do ciclo de vida do produto de software de uma empresa anônima, mostrando crescimento da equipe de engenharia, produtividade no mesmo período, custo por linha de código em função do tempo, produtividade por release, a folha de pagamento do desenvolvedor por release e no final, os efeitos dos custos. Em cada caso gráfico são feitas intepretações:
   ### Gráfico 1
   > Nesse gráfico se mostra a necessidade contínua de mais engenheiros, por um lado isso pode se atribuir a complexidade do projeto ou dificuldade na manutenção.
   ### Gráfico 2
@@ -33,7 +33,8 @@
   - A preocupação de lançar o produto  no mercado o quanto antes significa que você tem um horda de concorrentes e precisa ficar à frente deles, correndo o mais rápido que puder. Não dá para voltar e limpar tudo pois tem sempre um próximo recurso para terminar, ao ponto que a bagunça vai se acumulando e a produtividade continua a se aproximar assintoticamente do zero. Uma das mentiras que desenvolvedores acreditam é a noção de que escrever um código bagunçado permite fazer tudo mais rápido a curto prazo e só diminui o ritmo a longo prazo, e se esquecem que **fazer bagunça é sempre mais lento do que organizar e manter tudo limpo!** Para a organização de desenvolvimento, a melhor opção é **reconhecer e evitar seu próprio excesso de confiança** e **levar a sério a qualidade da arquitetura de software**. Construir um sistema com um design e arquitetura que minimizem o esforço e maximizem a produtividade, para isso, saber quais atributos da arquitetura do sistama podem concretizar esse objetivo.
 
 ### Um conto de Dois Valores
-  - Há um consenso de que todo sistema de software fornece dois valores para os stakeholders: comportamento e estrutura. Da mesma forma, há uma crença de que o trabalho de um programador é apenas fazer a máquina implementar os requisitos e corrigir qualquer bug, quando na verdade não é só isso. Já quanto a estrutura, e uma bem feita, cumpre o propósito de um software (produto[ware] suave[soft], que é ser fácil de mudar e a dificuldade em fazer essas mudanças deve ser proporcional apenas ao escopo da mudança e não à _forma_ da mudança. Mas qual desses fornece o maior valor? Considerando que existem sistemas praticamente impossíveis de mudar, pois o custo da mudança excede seu benefício?
+  - Há um consenso de que todo sistema de software fornece dois valores para os stakeholders: comportamento e estrutura. Da mesma forma, há uma crença de que o trabalho de um programador é apenas fazer a máquina implementar os requisitos e corrigir qualquer bug, quando na verdade não é só isso. Já quanto a estrutura, e uma bem feita, cumpre o propósito de um software (produto [ ware ] suave [ soft ]), que é ser fácil de mudar e a dificuldade em fazer essas mudanças deve ser proporcional apenas ao escopo da mudança e não à _forma_ da mudança. Mas qual desses fornece o maior valor? Considerando que existem sistemas praticamente impossíveis de mudar, pois o custo da mudança excede seu benefício?
+  [figura matriz eisenhower]
   > Usando a matriz Einsenhower podemos responder essas perguntas da seguinte forma: o comportamente é urgente, mas nem sempre é particularmente importante, enquanto a arquitetura é importante, mas nunca é particularmente urgente. O erro que gerentes e desenvolvedores cometem com frequência é falhar em separar recursos que são urgentes, mas não importantes, daqueles que são realmente urgentes e importantes.
   - Infelizmente a maioria dos gerentes de negócios não estão equipados para avaliar a importância da arquitetura, para isso são _contratados os desenvolvedores de software_. Portanto, é responsabilidade do time de desenvolvimento (ou um squad) garantir que a importância da arquitetura sobre a urgência dos recursos.
   - Francamente, a equipe de desenvolvimento precisa lutar pelo que acredita ser melhor para a empresa, assim como fazem os outros setores. Lembre-se que se a arquitetura vier por último, então o sistema ficará cada vez mais caro para desenvolver, tornando qualquer mudança impossível para uma parte ou todo o sistema.
@@ -41,9 +42,9 @@
 ## Parte II - Paradigmas da Programação
  A arquitetura de software começa com o código. Em 1938, Alan Turing estabeleceu as bases do que se tornaria programação de computadores. Em meados da década de 40, Turing já escrevia programas de computador (com laços, ramificações, atribuições, sub-rotinas e outras estruturas familiares) com a linguagem binária. Depois, em 1951, Grace Hopper cunhou o termo _compilador_ e inventou o primeiro compilador, o A0. Depois que o Fortran foi inventado em 1953, começaram a criação constante de linguagens de programação. Por consequência, A seguir explicam-se os paradigmas da programação:
  
- - [Programação Estruturada]: Surgiu como uma reação contra o estilo de programação baseado em _GO TO_, promovendo o uso de estruturas de controle sequênciais (_if_/_then_/_else_), de seleção e de repetição (_do_/_while_/_until_), facilitando a escrita de cógigo mais claro de entender e manter.
- - [Programação Orientada a Objetos]: O conceito de objetos como entidade que contêm tanto _dados_ quanto _métodos_ para operar esses dados, ajudou a desenvolver programas como as pessoas entendm o mundo, promovendo o re-uso de código, encapsulamento e abstração.
- - [Programação Funcional]: Inpirada na matemática e no cálculo lambda, esse paradigma foca em funções e imutabilidade; enfatiza o uso de funções que permitem abstrações e facilitando o racíocinio sobre o código, especialmente em sistemas distribuídos e concorrentes.
+ - **[Programação Estruturada]**: Surgiu como uma reação contra o estilo de programação baseado em _GO TO_, promovendo o uso de estruturas de controle sequênciais (_if_/_then_/_else_), de seleção e de repetição (_do_/_while_/_until_), facilitando a escrita de cógigo mais claro de entender e manter.
+ - **[Programação Orientada a Objetos]**: O conceito de objetos como entidade que contêm tanto _dados_ quanto _métodos_ para operar esses dados, ajudou a desenvolver programas como as pessoas entendm o mundo, promovendo o re-uso de código, encapsulamento e abstração.
+ - **[Programação Funcional]**: Inpirada na matemática e no cálculo lambda, esse paradigma foca em funções e imutabilidade; enfatiza o uso de funções que permitem abstrações e facilitando o racíocinio sobre o código, especialmente em sistemas distribuídos e concorrentes.
 
  > Deve-se manter um excelente alinhamento desses três paradigmas com as três grandes grandes preocupações da arquitetura: função, separação de componentes e gerenciamento de dados.
 
@@ -112,12 +113,25 @@ O objetivo principal dos princípios SOLID é _a criação de estruturas de soft
 - Embora seja necessário proteger a Interface de mudanças no Controlador, também é necessário proteger o Controlador de mudanças na Interface ocultando os detalhes da Interface.
 
 ### LSP (Liskov Substitution Principle)
-- 
-
+- O Princípio de Substituição de Liskov, introduzido por Bárbara Liskov, afirma que objetos de uma _superclasse_ podem ser substituídos por objetos de suas _subclasses_ sem que isso afete a harmonia do programa, em outras palavras, ***subclasses devem ser substituíveis por suas superclasses***.
+- Quando a POO ainda estava nos seus primeiros anos, a LSP foi considerada uma forma de orientar o uso de _herança_, contudo, atualmente esse princípio é aplicável a interfaces e implementações.
+- Existem formas de perceber a violação desse princípio em algumas maneiras, como _falhas de teste_, _excessões inesperadas_, _necessidade de Verificações de Tipo_, por exemplo.
+> Uma simples violação na capacidade de substituição pode contaminar a arquitetura do sistema com uma quantidade significante de mecanismos extras.
 
 ### ISP (Interface Segregation Principle)
+- O Princípio da Segregação de Interface declara que nenhum cliente deve ser forçado a dependender de métodos que não usa, sugere também que as interfaces devem ser específicadas para os clientes que as utilizam em vez de uma grande e única interface que serve para todos.
+- De forma geral, é prejudicial depender de módulos que contenham mais elementos do que você precisa: ***depender de algo que contém itens desnecessários pode causar problemas inesperados (leia-se BUGS!!)***.
+- Em linguagens estaticamente tipadas, a segregação de interfaces ajudaa manter o sistema flexível e a evitar dependência de implementações desnecessárias. Já em dinamicamente tipadas, a flexibilidade de tipagem permite que os objetos sejam  usados de forma mais intercambiável, desde que cumpram a interface esperada, além de promover modularidade.
 
 ### DIP (Dependency Inversion Principle)
+- "Sistemas mais flexíveis são aqueles em que as dependências de código-fonte se referem apenas a abstrações e não a itens concretos", assim se define o Princípio da Inversão de Dependência.
+- Em interfaces abstratas, toda mudança corresponde a uma mudança em suas implementações concretas, por outro lado, as mudanças nas implementações concretas normalmente ou nem sempre requere mudanças nas interfaces que implementam. (alter-text)
+- Segundo o princípio, evitando depender de implementações concretas e favorecendo o uso de interfaces abstratas, inferimos arquiteturas de software estáveis com as seguintes práticas:
+  + ***Não se refira a classes concretas voláteis***:
+  + ***Não derive de classes concretas voláteis***:
+  + ***Não sobrescreva funções concretas***:
+  + ***Nunca mencione o nome de algo que seja concreto e volátil***.
+- O _componente abstrato_ contém todas as regras de negócio de alto nível da aplicação, enquanto o _componente concreto_ contém todos os detalhes de implementação que as regras de negócio manipulam.
 
 ## Parte IV - Princípios dos Componentes
 
