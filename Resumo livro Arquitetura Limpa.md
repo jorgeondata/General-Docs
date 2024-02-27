@@ -1,6 +1,6 @@
 # Texto original: 12,714 palavras / Texto editado: 3,075 palavras
 
-## ParteI - Introdução
+## Parte I - Introdução
   No ínicio do capítulo, o autor nos faz refletir sobre fazer algo funcionar uma vez não é tão difícil e que fazer da maneira correta (com eficiência e eficácia) é difícil. Pela expêriência do autor, ele sugere que adquirir _conhecimentos_ e _habilidades_, desenvolver _raciocínio lógico_, _insighists_, _dedicação_ e _disciplina_ faz parte de ser um bom profissional. Um bom software para ser criado e mantido, só exige uma fração dos recursos humanos (ou pelo menos deveria), pois mudanças são simples e rápidas, o esforço é reduzido em proporção que a funcionalidade e flexibilidade são maximizadas. Ainda que isso soe um pouco fantasioso para quem já vive no mercado, a experiência do autor reforça que esse nível de organização é possível. No fim do texto, o autor indaga sobre a experiência do leitor:
   
 - Você já trabalhou em sistemas tão interconectados e intrincadamente acoplados que qualquer mudança?
@@ -112,6 +112,8 @@ O objetivo principal dos princípios SOLID é _a criação de estruturas de soft
 - Embora seja necessário proteger a Interface de mudanças no Controlador, também é necessário proteger o Controlador de mudanças na Interface ocultando os detalhes da Interface.
 
 ### LSP (Liskov Substitution Principle)
+- 
+
 
 ### ISP (Interface Segregation Principle)
 
