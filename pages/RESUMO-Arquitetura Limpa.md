@@ -136,7 +136,7 @@ O objetivo principal dos princípios SOLID é _a criação de estruturas de soft
 ## Parte IV - Princípios dos Componentes
 
 ### Componentes
-- O que são
+- Componentes nada mais são do que _unidades de implantação_. 
 
 - De que elementos são compostos
 
