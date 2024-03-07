@@ -136,6 +136,12 @@ O objetivo principal dos princípios SOLID é _a criação de estruturas de soft
 ## Parte IV - Princípios dos Componentes
 
 ### Componentes
+- O que são
+
+- De que elementos são compostos
+
+- Como se alocam em sistemas
+
 
 ### Coesão de Componentes
 
