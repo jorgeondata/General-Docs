@@ -1,5 +1,5 @@
 ## Entendendo Algoritimos, por Aditya Y. Bhargava
-[Repositório do Livro](github.com/egonschiele/grokking_algorithms)
+Repositório do Livro [AQUI](github.com/egonschiele/grokking_algorithms)
 
 ## Conteúdo
 O autor mostra o conteúdo dividido em duas partes: 
@@ -43,7 +43,21 @@ print pesquisa_binaria (minha_lista,-1) # => None // Não retorna nada pois não
 [^1]: "Numa lista com n elementos, qual a quantidade máximas de buscas que você precisaria tentar para encontrar um elemento específico?"
 
  ### Tempo de Execução e Notação Big O
+ - Quando se fala de eficiência com algoritmos, sempre se está tentando otimizar tempo e espaço: numa pesquisa simples, o número máximo de tentativas é igual ao tamanho da lista, o que chamamos de _tempo linear_. Já para a pesquisa binária, sua execução é com _tempo logarítmico_.
+ - Por conta de ambas pesquisas terem _tempos de execução_ distintos devido ao número de itens a serem processados, a ***notação Big O*** foi uma notação criada por Bachmann-Landau, de modo a "descrever a complexidade de um código por termos algébricos".
+ > [!WARNING]
+ > Imagine que você tem uma lista de tamanho _n_. Seu tempo de execução na notação Big O é "O(n)", onde a mesma NÃO fornece o tempo em segundos, ela permite que você compara o número de operações, ou seja, o quão rápido o algoritmo cresce: ela estabelece o tempo de execução para a pior hipótese.
+ - Além do tempo de execução para o pior dos casos, o tempo de execução para um "caso intermediário" também é importante, mais a frente no livro, o autor irá entrar em detalhes. Entretanto, existem cinco tempos de execução ordenados por rapidez:
+    1. O(log n)[^2] -> Tempo logarítmico (mais rápido)
+    2. O(n) -> Tempo linear
+    3. O(n*log n) -> Algoritmo rápido de ordenação
+    4. O(n²) -> Algoritmo lento de ordenação
+    5. O(n!) -> Algoritmo bastante lento
+ - Como podemos ver, a notação Big O expressa o tempo de execução ou o espaço necessário de um algoritmo por meio de seu crescimento, ou seja, de acordo com o tamanho da entrada, não sendo medido em segundos mas pelo _número de operações_.
 
+[^2]: Todos os log's mostrados no livro se referem a log na base 2 e não na base 10, como é comumente adotado em livros matemáticos.
+
+### Ordenação por Seleção
 
 
 
