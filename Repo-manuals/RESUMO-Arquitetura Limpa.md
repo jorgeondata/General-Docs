@@ -136,7 +136,9 @@ O objetivo principal dos princípios SOLID é _a criação de estruturas de soft
 ## Parte IV - Princípios dos Componentes
 
 ### Componentes
-- Componentes nada mais são do que _unidades de implantação_. 
+- Componentes nada mais são do que _unidades de implantação_, as menores entidades que podem ser implantadas como parte de um sistema, em todas as linguagens, são o elemento base de implantação, contudo:
+> Em linguagens compiladas, são agregações de arquivos binários (executáveis ou libs)
+> Em linguagens interpretadas, são agregações de arquivos-fonte (código legível)
 
 - De que elementos são compostos
 
