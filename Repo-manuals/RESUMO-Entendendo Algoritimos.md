@@ -67,15 +67,17 @@ print pesquisa_binaria (minha_lista,-1) # => None // Não retorna nada pois não
 > - Implementar outras estruturas de dados que necessitam de acesso direto a seus elementos;
 > - Manipulação de dados em algoritmos de ordenação e busca, para acesso sequencial ou direto a elementos.
 
+> [!TIP2]
 > Lista Encadeada é uma estrutura de dados que consiste em uma sequência de _nós_ (elemento básico da lista), onde cada nó armazena duas informações: dados (ou valores) e referência (ou _ponteiros_). Por essas características, listas podem ser aplicados para:
 > - Gerenciamento dinâmico de dados com pilhas e filas;
 > - Aplicações com incerções e remoções frequentes, como sistemas de gerenciamento de memória e implementação de listas de espera;
 > - Manipulação de dados complexos, como editores de texto e históricos de navegação, por exemplo.
+
 | *OPERAÇÃO*[^3] | **ARRAY** |  **LISTA** |
-|:--------------:|:---------:|:----------:|
-|   LEITURA      |    O(1)   |    O(n)    |
-|   INSERÇÃO     |    O(n)   |    O(1)    |
-|   ELIMINAÇÃO   |    O(n)   |    O(1)    |
+| --- | :---: | :---: |
+|   ***LEITURA***      |    O(1)   |    O(n)    |
+|   ***INSERÇÃO***     |    O(n)   |    O(1)    |
+|   ***ELIMINAÇÃO***   |    O(n)   |    O(1)    |
 [^3]: Tabela de tempos de execução
 - Embora não tenha apenas uma maneira correta de armazenar itens em cada caso específico, o que determinará o método usado para armazenamento dependerá do caso em questão.
 - A posição de um elemento em um array se chama **"índice"**, por isso a terminologia é "o elemento n está no índice tal."
