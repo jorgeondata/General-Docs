@@ -2,6 +2,10 @@
 
 ## Seção 1
 ### A importância de um bom código
+- "A maioria dos softwares hoje são como pirâmides egípcias: com milhões de tijolos dispostos um sobre o outro, sem integridade estrutural, mas construídos com força bruta e milhares de escravos." - Alan Kay, criador do Smalltalk;
+- Uma coisa que realmente define uma empresa boa de uma ótima empresa é seus processos, quando não há processos, há somente caos: os desenvolvedores não sabem o que esperar, os requerimntos e especificações não são documentados, se devem realizar testes ou _prova de conceito (Proof of Concept)_, etc.
+- Sem processos, gestores e desenvolvedores perdem tempo atrás de requisitos e esclareciementos, dessa forma tendo menos tempo para serem criativos e inovadores, dificultando se destacarem em seus trabalhos.
+- Um ambiente caótico leva a um produto com baixa qualidade, ineficiências a serem corrigidas posteriormente e menos funcionalidades sendo entregues, em outras palavras, mais _dívida técnica (Technical Debt)_.
 - 
 
 ### Panorama do JavaScript
